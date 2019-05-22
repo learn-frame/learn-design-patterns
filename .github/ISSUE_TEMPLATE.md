@@ -6,4 +6,4 @@ If the current behavior is a bug, please provide the steps to reproduce and if p
 
 What is the expected behavior?
 
-Which versions of BLOG_FE, and which browser / OS are affected by this issue? Did this work in previous versions of BLOG_FE?
+Which versions of Design Patterns, and which browser / OS are affected by this issue? Did this work in previous versions of Design Patterns?
