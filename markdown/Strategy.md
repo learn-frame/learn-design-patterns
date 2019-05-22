@@ -1,6 +1,8 @@
 # 策略模式
 
-> Define a family of algorithms, encapsulate each one, and make them interchangeable. (定义一组算法, 将每个算法都封装起来, 并且使他们之间可以互换.)
+> Define a family of algorithms, encapsulate each one, and make them interchangeable.
+>
+> 定义一组算法, 将每个算法都封装起来, 并且使他们之间可以互换.
 
 ## 说明
 
