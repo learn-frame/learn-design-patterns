@@ -1,4 +1,4 @@
-# 学习 23 种设计模式 ~JavaScript ver~
+# 学习 23 种设计模式 JavaScript version
 
 ## Motivation
 
