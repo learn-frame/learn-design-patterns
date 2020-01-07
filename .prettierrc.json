@@ -4,5 +4,5 @@
   "trailingComma": "all",
   "bracketSpacing": true,
   "proseWrap": "preserve",
-  "semi": true
+  "semi": false
 }
