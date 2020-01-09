@@ -1,47 +1,23 @@
 // 用代理实现单例模式
 class Dialog {
-  constructor(private name: string) {
-    this.name = name
-  }
-
   public doSomething() {
-    console.log(this.name)
+    // do something...
   }
 }
 
 const ProxySingleton = (() => {
   let instance = null
-  return (html: string) => {
+  return () => {
     if (!instance) {
-      instance = new Dialog(html)
+      instance = new Dialog()
     }
     return instance
   }
 })()
 
 // @ts-ignore
-const a = new ProxySingleton('hello')
+const a = new ProxySingleton()
 // @ts-ignore
-const b = new ProxySingleton('hi')
+const b = new ProxySingleton()
 
 console.log(a === b) // true
-
-class Singleton {
-  private instance: any
-  constructor(private name: string) {
-    this.instance = null
-    this.name = name
-  }
-
-  getInstance() {
-    if (!this.instance) {
-      this.instance = new Singleton(name)
-    } else {
-      return this.instance
-    }
-  }
-
-  public doSomething() {
-    // do something...
-  }
-}
