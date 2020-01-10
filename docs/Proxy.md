@@ -15,17 +15,29 @@
 ### 图片预加载
 
 下面的例子中，先用一张本地小菊花去展示给用户，然后悄悄地下载一张网络大图，待这张大图下载完毕，就替换小菊花。
+可以看到两个函数都有
 
 ```ts
-const imgDOM = document.querySelector('#img') as HTMLImageElement
-imgDOM.src = '/assets/小菊花.jpg'
-
-const img = new Image()
-img.src = 'https://img.com/一张大尺寸图.jpg'
-
-img.onload = function() {
-  if (imgDOM) {
-    imgDOM.src = img.src
+var myImage = (function() {
+  var imgNode = document.createElement('img')
+  document.body.appendChild(imgNode)
+  return {
+    setSrc: function(src: string) {
+      imgNode.src = src
+    },
   }
-}
+})()
+
+var proxyImage = (function() {
+  var img = new Image()
+  img.onload = function() {
+    myImage.setSrc(this.src)
+  }
+  return {
+    setSrc: function(src: string) {
+      myImage.setSrc('file:// /C:/Users/svenzeng/Desktop/loading.gif')
+      img.src = src
+    },
+  }
+})()
 ```
