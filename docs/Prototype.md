@@ -4,7 +4,7 @@
 
 > TIP
 >
-> 原型、原型链是 JavaScript 的核心思想，我曾经写过几篇博文：[从感性角度学习原型/原型链](https://www.yanceyleo.com/p/5cac4d89d397224556c48941)，[JavaScipt 七大继承全解析](https://www.yanceyleo.com/p/5caeef65d868ff4b49e2d61e)，[Object.create()](https://js.yanceyleo.com/ES/Object/create/)，仅供参考。
+> 原型、原型链是 JavaScript 的核心思想, 我曾经写过几篇博文：[从感性角度学习原型/原型链](https://www.yanceyleo.com/p/5cac4d89d397224556c48941), [JavaScipt 七大继承全解析](https://www.yanceyleo.com/p/5caeef65d868ff4b49e2d61e), [Object.create()](https://js.yanceyleo.com/ES/Object/create/), 仅供参考.
 
 ## 示例
 

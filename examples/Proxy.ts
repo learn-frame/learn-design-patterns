@@ -24,6 +24,7 @@ var myImage = (function() {
 var proxyImage = (function() {
   var img = new Image()
   img.onload = function() {
+    // @ts-ignore
     myImage.setSrc(this.src)
   }
   return {
