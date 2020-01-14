@@ -4,33 +4,49 @@ abstract class Beverage {
     console.log('烧开水')
   }
 
-  public brew() {} // 需被子类重写
+  public brew() {
+    throw new Error('子类必须重写 brew 方法')
+  } // 需被子类重写
 
-  public pourInCup() {} // 需被子类重写
+  public pourInCup() {
+    throw new Error('子类必须重写 pourInCup 方法')
+  } // 需被子类重写
 
-  public addCondiments() {} // 需被子类重写
+  public addCondiments() {
+    throw new Error('子类必须重写 addCondiments 方法')
+  } // 需被子类重写
+
+  public customerWantsCondiments() {
+    return true
+  }
 
   public init() {
     this.boilWater()
     this.brew()
     this.pourInCup()
-    this.addCondiments()
+    if (this.customerWantsCondiments()) {
+      this.addCondiments()
+    }
   }
 }
 
-class Coffee extends Beverage {
+class CoffeeWithHook extends Beverage {
   public brew() {
     console.log('用沸水冲泡咖啡')
   }
 
-  public addCondiments() {
+  public pourInCup() {
     console.log('把咖啡倒进杯子')
   }
 
-  public pourInCup() {
+  public addCondiments() {
     console.log('加糖和牛奶')
+  }
+
+  public customerWantsCondiments() {
+    return window.confirm('请问需要加奶和糖吗?')
   }
 }
 
-const coffee = new Coffee()
-coffee.init()
+const coffeeWithHook = new CoffeeWithHook()
+coffeeWithHook.init()
