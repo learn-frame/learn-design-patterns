@@ -1,4 +1,4 @@
-function create(proto) {
+function create(proto: any) {
   function F() {}
   F.prototype = proto
   return new F()

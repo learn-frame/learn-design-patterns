@@ -1,9 +1,7 @@
 const cost = (() => {
-  const values = []
-  return (...args) =>
-    args.length === 0
-      ? values.reduce((acc, val) => acc + val, 0)
-      : values.push(...args)
+  const values: number[] = []
+  return (...args: number[]) =>
+    args.length === 0 ? values.reduce((acc, val) => acc + val, 0) : values.push(...args)
 })()
 
 console.log(cost(100))
@@ -27,13 +25,6 @@ plus.add()
 plus.add()
 plus.add()
 plus.add()
-
-const p = plus1()
-p()
-p()
-p()
-p()
-p()
 
 const o = {
   value: 1,
