@@ -112,4 +112,4 @@ const objectPoolFactory = function<T>(createObjFn: Function) {
 
 [JavaScript 享元模式与性能优化](https://www.jianshu.com/p/536e1f6d0607)
 
-《JavaScript 设计模式与开发实践》 - 曾探
+JavaScript 设计模式与开发实践 - 曾探
